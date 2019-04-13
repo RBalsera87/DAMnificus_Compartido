@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace EntidadesCompartidas
 {
@@ -15,6 +16,9 @@ namespace EntidadesCompartidas
 
         [JsonProperty("token")]
         public string token { get; set; }
+
+        [JsonProperty("datos")]
+        public Dictionary<string, string> datos { get; set; }
 
     }
 }
