@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace EntidadesCompartidas
@@ -15,6 +16,6 @@ namespace EntidadesCompartidas
         public string salt { get; set; }
 
         [JsonProperty("coleccion")]
-        public List<Enlaces> coleccion { get; set; }
+        public Object coleccion { get; set; }
     }
 }
