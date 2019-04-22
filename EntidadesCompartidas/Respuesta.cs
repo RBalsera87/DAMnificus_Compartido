@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 
@@ -16,6 +17,6 @@ namespace EntidadesCompartidas
         public string salt { get; set; }
 
         [JsonProperty("coleccion")]
-        public Object coleccion { get; set; }
+        public JArray coleccion { get; set; }
     }
 }
