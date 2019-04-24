@@ -14,6 +14,8 @@ namespace EntidadesCompartidas
         public string tema;
         public string uploader;
         public string activo;
+        public bool like;
+        public bool dontLike;
 
         public string Report { get; internal set; }
 
@@ -32,6 +34,8 @@ namespace EntidadesCompartidas
             this.tema = tema;
             this.uploader = uploader;
             this.activo = activo;
+            this.like = false;
+            this.dontLike = false;
         }
     }
 }
