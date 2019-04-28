@@ -16,6 +16,7 @@ namespace EntidadesCompartidas
         public string activo;
         public bool like;
         public bool dontLike;
+        public int reportarFallo;
 
         public string Report { get; internal set; }
 
