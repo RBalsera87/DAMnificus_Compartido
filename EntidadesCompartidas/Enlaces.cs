@@ -17,13 +17,14 @@ namespace EntidadesCompartidas
         public bool like;
         public bool dontLike;
         public int reportarFallo;
+        public string asignatura;
 
         public string Report { get; internal set; }
 
         public Enlaces()
         {
         }
-        public Enlaces(string id, string link, string titulo, string descripcion, string valoracion, string imagen, string tipo, string tema, string uploader, string activo)
+        public Enlaces(string id, string link, string titulo, string descripcion, string valoracion, string imagen, string tipo, string tema, string uploader, string activo, string asignatura)
         {
             this.id = id;
             this.link = link;
@@ -37,6 +38,7 @@ namespace EntidadesCompartidas
             this.activo = activo;
             this.like = false;
             this.dontLike = false;
+            this.asignatura = asignatura;
         }
     }
 }
