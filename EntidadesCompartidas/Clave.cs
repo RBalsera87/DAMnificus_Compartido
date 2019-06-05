@@ -27,10 +27,10 @@ namespace EntidadesCompartidas
             rng.GetNonZeroBytes(saltBytes);
 
 
-            // Convierte la contraseña a arreglo de bytes
+            // Convierte la contraseña a array de bytes
             byte[] plainTextBytes = System.Text.Encoding.UTF8.GetBytes(PassUser);
 
-            // Arreglo para guardar la contraseña y la sal
+            // Array para guardar la contraseña y la sal
             byte[] plainTextWithSaltBytes = new byte[plainTextBytes.Length + saltBytes.Length];
 
             // Almacena la contraseña
@@ -51,10 +51,10 @@ namespace EntidadesCompartidas
             // Calcula el hash
             byte[] hashBytes = hash.ComputeHash(plainTextWithSaltBytes);
 
-            // Arreglo para almacenar el hash y la sal
+            // Array para almacenar el hash y la sal
             byte[] hashWithSaltBytes = new byte[hashBytes.Length + saltBytes.Length];
 
-            // Copia el hash en el arreglo
+            // Copia el hash en el Array
             for (int i = 0; i < hashBytes.Length; i++)
             {
                 hashWithSaltBytes[i] = hashBytes[i];
@@ -79,7 +79,7 @@ namespace EntidadesCompartidas
             // Convierte la contraseña a array de bytes
             byte[] plainTextBytes = System.Text.Encoding.UTF8.GetBytes(PassUser);
 
-            // Arreglo para guardar la contraseña y la sal
+            // Array para guardar la contraseña y la sal
             byte[] plainTextWithSaltBytes = new byte[plainTextBytes.Length + saltBytes.Length];
 
             // Almacena la contraseña
@@ -100,7 +100,7 @@ namespace EntidadesCompartidas
             // Calcula el hash
             byte[] hashBytes = hash.ComputeHash(plainTextWithSaltBytes);
 
-            // Arreglo para almacenar el hash y la sal
+            // Array para almacenar el hash y la sal
             byte[] hashWithSaltBytes = new byte[hashBytes.Length + saltBytes.Length];
 
             // Copia el hash en el array
@@ -122,7 +122,7 @@ namespace EntidadesCompartidas
         //Coge la Clave encriptada y extrae la "sal" y la retorna
         public static string getSal(string hash)
         {
-            // Convierte al hash a arreglo de bytes
+            // Convierte al hash a Array de bytes
             byte[] hashWithSaltBytes = Convert.FromBase64String(hash);
 
             // Tamaño del hash en bits
@@ -136,10 +136,10 @@ namespace EntidadesCompartidas
             if (hashWithSaltBytes.Length < hashSizeInBytes)
                 return null;
 
-            // Arreglo para almacenar la sal
+            // Array para almacenar la sal
             byte[] saltBytes = new byte[hashWithSaltBytes.Length - hashSizeInBytes];
 
-            // Copia la sal al arreglo
+            // Copia la sal al array
             for (int i = 0; i < saltBytes.Length; i++)
             {
                 saltBytes[i] = hashWithSaltBytes[hashSizeInBytes + i];
